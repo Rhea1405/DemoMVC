@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "sendobjectsusingviewbag";
+}
+
+<h2>sendobjectsusingviewbag</h2>
+
+@foreach(var item in ViewBag.xyz)
+{
+    <h1>
+        Empno: @item.Empno
+        Ename:@item.Ename
+        Sal:@item.Sal
+    </h1>
+}

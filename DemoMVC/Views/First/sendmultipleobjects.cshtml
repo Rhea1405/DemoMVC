@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DemoMVC.Models.Emp>
+@{
+    ViewBag.Title = "sendmultipleobjects";
+}
+
+<h2>sendmultipleobjects</h2>
+<table>
+    <tr>
+        <td>Empno</td>
+        <td>Empname</td>
+        <td>Salary</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Empno</td>
+            <td>@item.Ename</td>
+            <td>@item.Sal</td>
+        </tr>
+    }
+</table>

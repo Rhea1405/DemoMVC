@@ -1,0 +1,68 @@
+﻿@model DemoMVC.Models.Validationcls
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using(Html.BeginForm("getback","Validation"))
+{
+<table>
+    <tr>
+        <td>Firstname</td>
+        <td>@Html.TextBoxFor(a => a.Firstname)</td>
+        <td>@Html.ValidationMessageFor(a => a.Firstname)</td>
+    </tr>
+    <tr>
+        <td>Lastname</td>
+        <td>@Html.TextBoxFor(a => a.Lastname)</td>
+        <td>@Html.ValidationMessageFor(a => a.Lastname)</td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>@Html.TextBoxFor(a => a.Salary)</td>
+        <td>@Html.ValidationMessageFor(a => a.Salary)</td>
+    </tr>
+    <tr>
+        <td>Pancard</td>
+        <td>@Html.TextBoxFor(a => a.Pancard)</td>
+        <td>@Html.ValidationMessageFor(a => a.Pancard)</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.PasswordFor(a => a.Password)</td>
+        <td>@Html.ValidationMessageFor(a => a.Password)</td>
+    </tr>
+    <tr>
+        <td>confirm password</td>
+        <td>@Html.PasswordFor(a => a.Confirmpass)</td>
+        <td>@Html.ValidationMessageFor(a => a.Confirmpass)</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>@Html.TextBoxFor(a => a.Phone)</td>
+        <td>@Html.ValidationMessageFor(a => a.Phone)</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Html.TextBoxFor(a => a.Email)</td>
+        <td>@Html.ValidationMessageFor(a => a.Email)</td>
+    </tr>
+    <tr>
+        <td>DOJ</td>
+        <td>@Html.TextBoxFor(a => a.Doj)</td>
+        <td>@Html.ValidationMessageFor(a => a.Doj)</td>
+    </tr>
+
+
+
+    <tr>
+        <td><input type="submit" value="submit" /></td>
+    </tr>
+</table>
+
+
+
+
+
+
+}

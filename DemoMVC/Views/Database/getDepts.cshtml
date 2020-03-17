@@ -1,0 +1,67 @@
+﻿@model IEnumerable<DemoMVC.Models.EMPDATA>
+@{
+    ViewBag.Title = "getDepts";
+}
+
+@using(Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Enter deptno</td>
+            <td>@Html.DropDownList("ddldeptno",new SelectList(ViewBag.l,"Deptno","Dname"),"select",new {onblur="func1();"})</td>
+        </tr>
+    </table>
+    if(Model!=null)
+    {
+<table>
+    <tr>
+        <td>Empno</td>
+        <td>Ename</td>
+        <td>Job</td>
+        <td>MGR</td>
+        <td>Hiredate</td>
+        <td>SAL</td>
+        <td>Comm</td>
+        <td>Deptno</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EMPNO</td>
+            <td>@item.ENAME</td>
+            <td>@item.JOB</td>
+            <td>@item.MGR</td>
+            <td>@item.HIREDATE</td>
+            <td>@item.SAL</td>
+            <td>@item.COMM</td>
+            <td>@item.DEPTNO</td>
+
+
+        </tr>
+    }
+
+
+</table>
+
+
+
+
+
+    }
+
+
+
+}
+
+<script>
+    function func1()
+    {
+        var dno = document.getElementById("ddldeptno").value;
+        window.location.href = "/Database/showdata?d=" + dno;
+
+
+    }
+
+
+</script>
+

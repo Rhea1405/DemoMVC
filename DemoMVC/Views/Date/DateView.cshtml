@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DemoMVC.Models.EMPDATA>
+@{
+    ViewBag.Title = "DateView";
+}
+
+<h2>DateView</h2>
+@using(Html.BeginForm("extractdate","Date"))
+{
+    <table>
+        <tr>
+            <td>Start Date</td>
+            <td>@Html.TextBox("txtsd")</td>
+        </tr>
+        <tr>
+            <td>End Date</td>
+            <td>@Html.TextBox("txted")</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+    if(ViewBag.list!=null)
+    {
+<table>
+    <tr>
+        <td>EMPNO</td>
+        <td>ENAME</td>
+        <td>JOB</td>
+        <td>MGR</td>
+        <td>HIREDATE</td>
+        <td>SAL</td>
+        <td>COMM</td>
+        <td>DEPTNO</td>
+
+    </tr>
+    @foreach(var i in ViewBag.list)
+    {
+
+
+<tr>
+    <td>@i.EMPNO</td>
+    <td>@i.ENAME</td>
+    <td>@i.JOB</td>
+    <td>@i.MGR</td>
+    <td>@i.HIREDATE</td>
+    <td>@i.SAL</td>
+    <td>@i.COMM</td>
+    <td>@i.DEPTNO</td>
+
+</tr>
+
+    }
+
+</table>
+        }
+
+    }
+
+
+
+
